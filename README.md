@@ -4,7 +4,7 @@
 66022073 นายวงศพัทร์ ชิตท้วม Full-stack
 
 # การจัดโฟล์เดอร์
-Open floder เลือกโฟล์เดอร์ Lastboss
+Open floder เลือกโฟล์เดอร์ Webcombine
 # install
 npm install express nodemon ejs mysql2 bcryptjs jsonwebtoken cookie-parser body-parser
 # Run server
