@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โพสต์ใหม่</title>
+    <link rel="stylesheet" href="css/post.css"> <!-- เชื่อมโยงกับไฟล์ CSS -->
+</head>
+<body>
+    <div class="post-container">
+        <h1>โพสต์ใหม่</h1>
+        <form action="/list-machines" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">หัวข้อ:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="content">เนื้อหาของโพสต์:</label>
+                <textarea id="content" name="content" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="image">เลือกรูปภาพ (ถ้ามี):</label>
+                <input type="file" id="image" name="image">
+            </div>
+
+            <button type="submit" class="submit-btn">โพสต์</button>
+        </form>
+    </div>
+</body>
+</html>

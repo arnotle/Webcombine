@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/contact.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7e9da;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #d4b89d;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #d4b89d;
+    padding: 1rem 0;
+    border-bottom: 2px solid #bfa98d;
+}
+
+.nav-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 1rem;
+}
+
+.menu li a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #b91a1a;
+}
+
+.login{
+    background-color: #a51717;
+    padding: 4px 10px; 
+    border-radius: 10%;
+}
+
+.login a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.login a:hover {
+    color: #706b6b;
+}
+
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section {
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-button {
+    padding: 10px;
+    background-color: #d4b89d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    transition: 0.3s;
+}
+.contact-button:hover{
+    background: #6b6365;
+    color: white;   
+}
+
+.contact-info {
+    /*display: flex;*/
+    flex-direction: column;
+    /*justify-content: center;*/
+    padding: 10px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.logout-container {
+    text-align: center;
+}
+
+.logout-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff4b4b; /* สีพื้นหลังปุ่ม */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* ลบขีดเส้นใต้ของลิงก์ */
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #ff1c1c; /* สีเมื่อ hover */
+}
+</style>
+
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-con">
+                <div class="logo"><a href="/homelog">Combine Harvester</a></div> <!-- เปลี่ยน href เป็น /home -->
+                <ul class="menu">
+                    <li><a href="/homelog"><h4>หน้าหลัก</h4></a></li> <!-- เปลี่ยน href เป็น /home -->
+                    <li><a href="/home#second"><h4>ข้อมูล</h4></a></li>
+                    <li><a href="/home#About"><h4>เกี่ยวกับเรา</h4></a></li>
+                    <li><a href="/contact"><h4>ติดต่อเรา</h4></a></li> <!-- เปลี่ยน href เป็น /contact -->
+                </ul>
+                <div class="login"><a href="/login">Logout</a></div> <!-- เปลี่ยน href เป็น /login -->
+            </div>
+        </div>
+    </nav>
+    
+
+
+    <main>
+        <section class="contact-section">
+            <h1 class="contact-T">ติดต่อ</h1>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Phone">
+                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="message">
+                    <button class="contact-button">Send</button>
+                </form>
+                <div class="contact-info">
+                    <p><h4>District Maeka Payao, Thailand</h4></p>
+                    <p><h4>📞 +66 098765432</h4></p>
+                    <p><h4>✉️ CombineHarverter@gmail.com</h4></p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>information</title>
+
+    <link rel="stylesheet" href="css/information.css">
+
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-con">
+                <div class="logo"><a href="/homelog">Combine Harvester</a></div> <!-- เปลี่ยน href เป็น /home -->
+                <ul class="menu">
+                    <li><a href="/homelog"><h4>หน้าหลัก</h4></a></li> <!-- เปลี่ยน href เป็น /home -->
+                    <li><a href="#second"><h4>ข้อมูล</h4></a></li>
+                    <li><a href="#About"><h4>เกี่ยวกับเรา</h4></a></li>
+                    <li><a href="/contact"><h4>ติดต่อเรา</h4></a></li> <!-- เปลี่ยน href เป็น /contact -->
+                </ul>
+                <div class="login"><a href="/login">Logout</a></div> <!-- เปลี่ยน href เป็น /login -->
+            </div>
+        </div>
+    </nav>
+    
+
+    <section>
+        <div class="container2">
+            <div class="sidebar">
+                <a href="/information" class="sidebar-items">
+                    รถเกี่ยวคอรวง
+                </a>
+                <a href="/information2" class="sidebar-items">
+                    รถเกี่ยวนวดข้าว
+                </a>
+                <a href="/information3" class="sidebar-items">
+                    รถเกี่ยวเดินตาม
+                </a>
+
+            </div>
+
+            <div class="product">
+                <div class="product-items" onclick="openModal('product1')">
+                    <img class="product-img" src="img/นวด1.png" alt="">
+                    <p><h4>รุ่น DC-120X</h4></p>
+                </div>
+                <div class="product-items" onclick="openModal('product2')">
+                    <img class="product-img" src="img/นวด2.png" alt="">
+                    <h4><p>รุ่น DC-93 KIS</p></h4>
+                </div>
+                <div class="product-items" onclick="openModal('product3')">
+                    <img class="product-img" src="img/นวด3.png" alt="">
+                    <h4><p>รุ่น DC-70G Plus Cabin</p></h4>
+                </div>
+                <div class="product-items" onclick="openModal('product4')">
+                    <img class="product-img" src="img/นวด4.png" alt="">
+                    <h4><p>รุ่น DC-70 Plus</p></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="product1" class="modal" style="display: none;" >
+        <div class="modal-bg" onclick="closeModal('product1')"></div>
+        <div class="modal-page">
+            <button class="close-btn" onclick="closeModal('product1')">close</button>
+            <h2>รายละเอียด</h2>
+            <div class="modaldesc-content">
+                <img class= "modaldesc-img" src="img/นวด1.png" alt="">
+                <div class="modaldesc-detail">
+                    <h4>ชื่อสินค้า</h4>
+                    <p>DC-120X</p>
+                    <h4>กำลังเครื่องยนต์</h4>
+                    <p>120.00</p>
+                    <h4>ราคา</h4>
+                    <p>1,855,000 บาท</p>
+                    <br>
+                    <p>แรงเต็มกำลัง ด้วยเครื่องยนต์ระบบคอมมอนเรล สมรรถนะสูง ขนาด 120 แรงม้า มาพร้อมหน้าเกี่ยวกว้าง 3 เมตร มาพร้อมช่วงล่างดีไซน์ใหม่ แกร่ง สู้หล่ม เก็บเกี่ยวคล่องตัว ด้วยระบบเลี้ยวอิสระ K-Turn ลุยงานต่อเนื่องด้วยชุดแผงหม้อน้ำขนาดใหญ่มาพร้อมพัดลมหมุนย้อนทิศทางอัตโนมัติ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="product2" class="modal" style="display: none;">
+        <div class="modal-bg" onclick="closeModal('product2')"></div>
+        <div class="modal-page">
+            <button class="close-btn" onclick="closeModal('product2')">close</button>
+            <h2>รายละเอียด</h2>
+            <div class="modaldesc-content">
+                <img class= "modaldesc-img" src="img/นวด2.png" alt="">
+                <div class="modaldesc-detail">
+                    <h4>ชื่อสินค้า</h4>
+                    <p>DC-93 KIS</p>
+                    <h4>กำลังเครื่องยนต์</h4>
+                    <p>93.00</p>
+                    <h4>ราคา</h4>
+                    <p>1,275,000 บาท</p>
+                    <br>
+                    <p>ความกว้างตัวรถ 2.42 เมตร คล่องตัวสูงในการทำงาน วงเลี้ยวแคบเพียง 2.4 เมตร สะดวกในการกลับหัวงาน. DC-93 KIS. สู้หล่ม พร้อมทุกสภาพพื้นที่. ด้วยความสูงใต้ท้องรถ 330 มม. พืนที่สัมผัสมากขึ้น</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="product3" class="modal" style="display: none;">
+        <div class="modal-bg" onclick="closeModal('product3')"></div>
+        <div class="modal-page">
+            <button class="close-btn" onclick="closeModal('product3')">close</button>
+            <h2>รายละเอียด</h2>
+            <div class="modaldesc-content">
+                <img class= "modaldesc-img" src="img/นวด3.png" alt="">
+                <div class="modaldesc-detail">
+                    <h4>ชื่อสินค้า</h4>
+                    <p>DC-70G Plus Cabin</p>
+                    <h4>กำลังเครื่องยนต์</h4>
+                    <p>69.00</p>
+                    <h4>ราคา</h4>
+                    <p>1,200,000 บาท</p>
+                    <br>
+                    <p>ระบบปรับอากาศ. ขนาดเครื่องปรับอากาศ 18,000 BTU ช่วยให้ห้องโดยสารเย็นสบาย รองรับการทำงานที่มีอุณหภูมิภายนอกสูงถึง 45 องศาเซลเซียส ปรับความแรงลมได้ 4 ระดับ </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="product4" class="modal" style="display: none;">
+        <div class="modal-bg" onclick="closeModal('product4')"></div>
+        <div class="modal-page">
+            <button class="close-btn" onclick="closeModal('product4')">close</button>
+            <h2>รายละเอียด</h2>
+            <div class="modaldesc-content">
+                <img class= "modaldesc-img" src="img/นวด4.png" alt="">
+                <div class="modaldesc-detail">
+                    <h4>ชื่อสินค้า</h4>
+                    <p>DC-70 Plus</p>
+                    <h4>กำลังเครื่องยนต์</h4>
+                    <p>69.00</p>
+                    <h4>ราคา</h4>
+                    <p>960,000 บาท</p>
+                    <br>
+                    <p>นวดสะอาด ลดปริมาณข้าวที่ติดไปกับฟาง. ตู้นวดและชุดลูกนวดขนาดใหญ่และยาว พร้อมชุดตะแกรงคัดแยก 2 ชั้น และมีลมเป่า 3 ทิศทาง ปรับตั้งตะแกรงได้ถึง 4 ระดับ เพื่อให้เหมาะสมกับพันธุ์ข้าว</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/close.js"></script>
+</body>
+</html>

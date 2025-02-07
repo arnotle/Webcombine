@@ -1,0 +1,131 @@
+/* ใช้ Flexbox เพื่อจัดระเบียบ Navbar */
+.nav {
+    background-color: #343a40;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* ใช้ space-between เพื่อจัดระยะห่างระหว่าง Home และ Logout */
+    align-items: center; /* จัดในแนวตั้ง */
+    border-bottom: 2px solid #007bff;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-left: 20px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: #007bff;
+    border-radius: 4px;
+  }
+  
+  /* ปรับการแสดงผล Home ให้อยู่ทางซ้ายสุด */
+  .navbar-nav-left {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .navbar-nav-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .navbar-nav .nav-item a[href="/dashboard"] {
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  .navbar-nav .nav-item a[href="/login"] {
+    font-weight: bold;
+    color: #dc3545;
+  }
+  
+  .navbar-nav .nav-item a[href="/login"]:hover {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  
+  
+  /* ปรับสไตล์สำหรับตาราง */
+  .table {
+    margin-top: 30px;
+    background-color: #ffffff;
+  }
+  
+  .table th, .table td {
+    text-align: center;
+    padding: 12px;
+  }
+  
+  .table th {
+    color: #fff;
+  }
+  
+  .table-striped tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  /* ปรับสไตล์ปุ่มสำหรับการแก้ไขและลบ */
+  .btn-warning, .btn-danger {
+    margin-right: 5px;
+  }
+  
+  /* ปรับสไตล์ modal */
+  .modal-content {
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .modal-header {
+    color: white;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .modal-body {
+    background-color: #f8f9fa;
+  }
+  
+  /* ปรับปุ่มในฟอร์มแก้ไข */
+  #editForm .btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  #editForm .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* สไตล์ของปุ่ม Logout */
+  .btn-danger {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  /* สไตล์ข้อความ */
+  h1 {
+    color: #343a40;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  
+  p {
+    color: #6c757d;
+    font-size: 1.1rem;
+  }
+  

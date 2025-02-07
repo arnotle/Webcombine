@@ -1,0 +1,68 @@
+/* ทำให้พื้นหลังดูดี */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* จัดการ layout ของ container */
+.post-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* เพิ่มระยะห่างและความสวยงามให้กับหัวข้อ */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* รูปแบบของ label และ input field */
+label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+    display: block;
+}
+
+input[type="text"], textarea, input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* เพิ่มการจัดการให้ textarea สามารถแสดงหลายบรรทัดได้ */
+textarea {
+    resize: vertical;
+}
+
+/* รูปแบบของปุ่ม */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* เพิ่มความห่างระหว่างฟอร์มกลุ่มต่างๆ */
+.form-group {
+    margin-bottom: 20px;
+}

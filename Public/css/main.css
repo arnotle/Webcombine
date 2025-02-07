@@ -1,0 +1,164 @@
+/* Custom styles */
+.card-title {
+    font-weight: bold;
+    color: #003366;
+  }
+
+/* สีธีมเปลือกข้าว */
+:root {
+    --grain-primary: #c9a66b; /* สีเหลืองทอง */
+    --grain-secondary: #8c704d; /* สีน้ำตาล */
+    --grain-light: #f6e8d5; /* สีครีม */
+    --grain-dark: #5a4330; /* สีน้ำตาลเข้ม */
+  }
+  
+  /* Header */
+  .bg-grain {
+    background-color: var(--grain-primary) !important;
+  }
+  
+  .text-grain {
+    color: var(--grain-dark) !important;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: var(--grain-light) !important;
+  }
+  
+  .navbar-dark .navbar-brand {
+    color: var(--grain-dark) !important;
+  }
+  
+  .navbar-dark .navbar-toggler-icon {
+    background-color: var(--grain-dark);
+  }
+
+
+
+  .btn-secondary {
+    background-color: #c9a66b; /* สีพื้นหลังใหม่ */
+    color: #fff; /* สีตัวอักษรใหม่ */
+    border-color: #8c704d; /* สีขอบ */
+  }
+
+  .btn-secondary:hover {
+    background-color: #8c704d; /* สีพื้นหลังเมื่อชี้เมาส์ */
+    color: #fff; /* สีตัวอักษรเมื่อชี้เมาส์ */
+    border-color: #5a4330; /* สีขอบเมื่อชี้เมาส์ */
+  }
+
+
+  
+  /* Sidebar */
+  .sidebar {
+    background-color: var(--grain-light);
+  }
+  
+  .sidebar .nav-link {
+    color: var(--grain-secondary);
+  }
+  
+  .sidebar .nav-link.active {
+    background-color: var(--grain-primary);
+    color: var(--grain-light);
+  }
+  
+  /* Cards */
+  .card {
+    border: 1px solid var(--grain-secondary);
+  }
+  
+  .card-title {
+    color: var(--grain-dark);
+  }
+  
+  .card-text {
+    color: var(--grain-secondary);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--grain-primary);
+    color: var(--grain-light);
+  }
+
+  /* Footer */
+footer {
+  background-color: var(--grain-primary);
+  color: var(--grain-light);
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--grain-dark);
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: var(--grain-secondary);
+}
+
+footer .fw-bold {
+  font-weight: bold;
+  color: var(--grain-dark);
+}
+
+
+.carousel-item img {
+  max-width: 100%;
+  max-height: 300px; /* จำกัดความสูง */
+  object-fit: cover; /* ปรับรูปภาพให้อยู่ในพื้นที่โดยไม่บิดเบี้ยว */
+  border-radius: 10px; /* เพิ่มมุมโค้งเล็กน้อย */
+}
+
+
+/* สไตล์สำหรับ slider */
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* ปุ่มเลื่อน */
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}

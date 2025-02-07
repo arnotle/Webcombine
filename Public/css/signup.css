@@ -1,0 +1,36 @@
+body {
+    background: url(img/bg1.webp);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+  }
+  .register-container {
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .register-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .form-control:focus {
+    box-shadow: none;
+    border-color: #28a745;
+  }
+  .btn-success {
+    background-color: #28a745;
+    border: none;
+  }
+  .btn-success:hover {
+    background-color: #218838;
+  }
+  .login-link {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  

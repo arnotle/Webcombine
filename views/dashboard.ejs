@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/dash.css">
+</head>
+
+<header class="nav">
+  <ul class="navbar-nav navbar-nav-left">
+    <li class="nav-item">
+      <a class="nav-link" href="/home">Home</a>
+    </li>
+  </ul>
+  
+  <ul class="navbar-nav navbar-nav-right">
+    <% if (typeof user !== 'undefined' && user.role === 'admin') { %>
+      <li class="nav-item">
+        <a class="nav-link" href="/dashboard">Admin Dashboard</a>
+      </li>
+    <% } %>
+    
+    <li class="nav-item">
+      <a class="nav-link" href="/login">Logout</a>
+    </li>
+  </ul>
+</header>
+
+
+
+<body>
+  <div class="container mt-5">
+    <h1>Admin Dashboard</h1>
+    <p>Manage users below.</p>
+    
+    <table id="usersTable" class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data will be dynamically added here -->
+      </tbody>
+    </table>
+
+    <a href="/login" class="btn btn-danger">Logout</a>
+  </div>
+
+  <!-- Modal for Editing User -->
+  <div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="editForm">
+            <input type="hidden" id="editUserId">
+            <div class="mb-3">
+              <label for="editFirstname" class="form-label">Firstname</label>
+              <input type="text" class="form-control" id="editFirstname" required>
+            </div>
+            <div class="mb-3">
+              <label for="editLastname" class="form-label">Lastname</label>
+              <input type="text" class="form-control" id="editLastname" required>
+            </div>
+            <div class="mb-3">
+              <label for="editPhone" class="form-label">Phone</label>
+              <input type="text" class="form-control" id="editPhone" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      function fetchUsers() {
+        fetch('/api/users')
+          .then(response => response.json())
+          .then(data => {
+            let tableBody = '';
+            data.forEach(user => {
+              tableBody += `
+                <tr>
+                  <td>${user.id}</td>
+                  <td>${user.firstname}</td>
+                  <td>${user.lastname}</td>
+                  <td>${user.email}</td>
+                  <td>${user.phone}</td>
+                  <td>
+                    <button class="btn btn-warning btn-sm edit-btn" data-id="${user.id}" data-firstname="${user.firstname}" data-lastname="${user.lastname}" data-phone="${user.phone}">Edit</button>
+                    <button class="btn btn-danger btn-sm delete-btn" data-id="${user.id}">Delete</button>
+                  </td>
+                </tr>`;
+            });
+            $('#usersTable tbody').html(tableBody);
+            $('#usersTable').DataTable();
+          });
+      }
+
+      fetchUsers();
+
+      // Handle edit button click
+      $(document).on('click', '.edit-btn', function() {
+        $('#editUserId').val($(this).data('id'));
+        $('#editFirstname').val($(this).data('firstname'));
+        $('#editLastname').val($(this).data('lastname'));
+        $('#editPhone').val($(this).data('phone'));
+        $('#editModal').modal('show');
+      });
+
+      // Handle update form submission
+      $('#editForm').submit(function(e) {
+        e.preventDefault();
+        const id = $('#editUserId').val();
+        const updatedData = {
+          firstname: $('#editFirstname').val(),
+          lastname: $('#editLastname').val(),
+          phone: $('#editPhone').val()
+        };
+
+        fetch(`/api/users/${id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(updatedData)
+        }).then(response => response.json())
+          .then(data => {
+            alert(data.message);
+            $('#editModal').modal('hide');
+            fetchUsers();
+          });
+      });
+
+      // Handle delete button click
+      $(document).on('click', '.delete-btn', function() {
+        const id = $(this).data('id');
+        if (confirm('Are you sure you want to delete this user?')) {
+          fetch(`/api/users/${id}`, { method: 'DELETE' })
+            .then(response => response.json())
+            .then(data => {
+              alert(data.message);
+              fetchUsers();
+            });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

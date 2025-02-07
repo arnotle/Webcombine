@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Page</title>
+    <link rel="stylesheet" href="css/home.css">
+
+				
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-con">
+                <div class="logo"><a href="/homelog">Combine Harvester</a></div> <!-- เปลี่ยน href เป็น /home -->
+                <ul class="menu">
+                    <li><a href="/homelog"><h4>หน้าหลัก</h4></a></li> <!-- เปลี่ยน href เป็น /home -->
+                    <li><a href="#second"><h4>ข้อมูล</h4></a></li>
+                    <li><a href="#About"><h4>เกี่ยวกับเรา</h4></a></li>
+                    <li><a href="/contact"><h4>ติดต่อเรา</h4></a></li> <!-- เปลี่ยน href เป็น /contact -->
+                </ul>
+                <div class="login"><a href="/home">Logout</a></div> <!-- เปลี่ยน href เป็น /login -->
+            </div>
+        </div>
+    </nav>
+    
+
+    <section class="maincontent">
+        <div class="container">
+            <div class="maincontent-con">
+                <div class="maincontent-info">
+                    <h3>ยินดีต้อนรับสู่ combine Website </h3>
+                    <div class="content-s">
+                        <p><h5>แหล่งข้อมูลที่ครบครันสำหรับผู้ที่รักรถและเกษตรกรที่ต้องการเครื่องมือช่วยในการเก็บเกี่ยวข้าว พร้อมเคล็ดลับและคำแนะนำเพื่อการทำงานที่ง่ายและมีประสิทธิภาพ</h5></p>
+                        <p class="extra-text">นี่คือข้อความเพิ่มเติมที่จะแสดงเมื่อกดปุ่ม</p>
+                        <button class="btn" onclick="toggleText()">เพิ่มเติม</button>
+                    </div>
+                </div>
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1565647952915-9644fcd446a4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1507311036505-05669fc503cb?q=80&w=2129&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://plus.unsplash.com/premium_photo-1661962938459-6cac79caa212?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1507662228758-08d030c4820b?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="content-title">
+                <h3 id="second">แสดงรถเกี่ยวประเภทอื่นๆ</h3>
+            </div>
+            <div class="content-con">
+                <div class="content-item">
+                    <img src="img/รถเกี่ยวคอรวง.png" alt="">
+                    <h4>รถเกี่ยวคอรวง</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <a href="/information">ดูรถทั้งหมด</a>
+                </div>
+                <div class="content-item">
+                    <img src="img/นวดข้าว.png" alt="">
+                    <h4>รถเกี่ยวนวดข้าว</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <a href="/information2">ดูรถทั้งหมด</a>
+                </div>
+                <div class="content-item">
+                    <img src="img/รถเดินตาม.png" alt="">
+                    <h4>รถเกี่ยวเดินตาม</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <a href="/information3">ดูรถทั้งหมด</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="About" class="footer-top">
+        <div class="container">
+            <div class="footer-top-con">
+                <div class="footer-top-item">
+                    <h2>About me</h2>
+                    <p><h5>Comprehensive vehicle information – cars, trucks, agricultural, and commercial vehicles.
+                        Accurate specs, prices, reviews, and maintenance tips.
+                        Helping buyers, collectors, and enthusiasts make informed decisions.</h5></p>
+                </div>
+                <div class="footer-top-item">
+                    <h4>เกี่ยวกับเรา</h4>
+                    <p><h5>เราคือแหล่งข้อมูลที่ครอบคลุมเกี่ยวกับรถยนต์และยานพาหนะทุกประเภท ไม่ว่าจะเป็น รถยนต์ส่วนบุคคล, รถบรรทุก, รถเพื่อการเกษตร, หรือรถเพื่อการพาณิชย์
+
+                        เป้าหมายของเรา คือการให้ข้อมูลที่ถูกต้อง เชื่อถือได้ และอัปเดตอยู่เสมอเกี่ยวกับ สเปค, ราคา, รีวิว, และเคล็ดลับการบำรุงรักษา
+                        เหมาะสำหรับ ผู้ที่กำลังมองหารถยนต์, นักสะสม, หรือผู้ที่ต้องการศึกษาเกี่ยวกับยานยนต์
+                        
+                        เราพร้อมเป็นศูนย์กลางความรู้ด้านยานยนต์ เพื่อช่วยให้คุณตัดสินใจได้อย่างมั่นใจ</h5> </p>
+                </div>
+                <div class="footer-top-item">
+                    <h4>Social Links</h4>
+                    <p>Facebook</p>
+                    <p>Twitter</p>
+                    <p>Google+</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-buttom">
+        Copyright 2024, All rights reserved Tech Digital
+    </div>
+
+
+    <script src="js/buttom.js"></script>
+    <script src="js/silde.js"></script>
+</body>
+</html>
